@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Round the calculator container */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Round the display corners */
+    box-sizing: border-box;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Make buttons round */
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Default button background */
+}
+
+button.operator-btn {
+    background-color: #ffab00; /* Yellow for operators */
+}
+
+button.operator-btn:hover {
+    background-color: #ffd700; /* Lighter yellow for hover */
+}
+
+button:nth-child(odd) {
+    background-color: #87ceeb; /* Light blue for odd buttons */
+}
+
+button:nth-child(even) {
+    background-color: #ff6347; /* Light coral for even buttons */
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+center p {
+    font-size: 12px;
+    color: #666;
+}
