@@ -384,43 +384,43 @@ section .container {
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #fff; /* Changed from green to plain white */
+  color: #fff;
 }
 
-/* Default state for list items and paragraphs */
+/* 1. Default state: Plain light grey for all text */
 .about-me .content ul li, 
 .about-me .content p {
-  color: #dee2e6; /* Plain light grey */
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: #dee2e6; 
+  transition: all 0.3s ease;
   cursor: default;
 }
 
-/* VIBGYOR Hover Effects */
-/* We use n-th child to assign different colors to different lines automatically */
+/* 2. Specific VIBGYOR Hover Effects for List Items */
+/* We add .about-me to increase specificity so green doesn't take over */
+.about-me .content ul li:nth-child(7n+1):hover { color: #8a2be2 !important; text-shadow: 0 0 8px #8a2be2; } /* Violet */
+.about-me .content ul li:nth-child(7n+2):hover { color: #4b0082 !important; text-shadow: 0 0 8px #4b0082; } /* Indigo */
+.about-me .content ul li:nth-child(7n+3):hover { color: #1e90ff !important; text-shadow: 0 0 8px #1e90ff; } /* Blue */
+.about-me .content ul li:nth-child(7n+4):hover { color: #2ecc71 !important; text-shadow: 0 0 8px #2ecc71; } /* Green */
+.about-me .content ul li:nth-child(7n+5):hover { color: #f1c40f !important; text-shadow: 0 0 8px #f1c40f; } /* Yellow */
+.about-me .content ul li:nth-child(7n+6):hover { color: #e67e22 !important; text-shadow: 0 0 8px #e67e22; } /* Orange */
+.about-me .content ul li:nth-child(7n+7):hover { color: #e74c3c !important; text-shadow: 0 0 8px #e74c3c; } /* Red */
 
-.about-me .content ul li:nth-child(7n+1):hover { color: #8a2be2; text-shadow: 0 0 5px #8a2be2; } /* Violet */
-.about-me .content ul li:nth-child(7n+2):hover { color: #4b0082; text-shadow: 0 0 5px #4b0082; } /* Indigo */
-.about-me .content ul li:nth-child(7n+3):hover { color: #1e90ff; text-shadow: 0 0 5px #1e90ff; } /* Blue */
-.about-me .content ul li:nth-child(7n+4):hover { color: #2ecc71; text-shadow: 0 0 5px #2ecc71; } /* Green */
-.about-me .content ul li:nth-child(7n+5):hover { color: #f1c40f; text-shadow: 0 0 5px #f1c40f; } /* Yellow */
-.about-me .content ul li:nth-child(7n+6):hover { color: #e67e22; text-shadow: 0 0 5px #e67e22; } /* Orange */
-.about-me .content ul li:nth-child(7n+7):hover { color: #e74c3c; text-shadow: 0 0 5px #e74c3c; } /* Red */
-
-/* Also apply a specific color to paragraphs on hover */
-.about-me .content p:hover {
-  color: #12d640; /* Vibrant green on hover for general text */
-}
-
+/* 3. Handle the Icons (i tags) inside the list */
 .about-me .content ul i {
-  font-size: 20px;
-  padding-right: 2px;
-  color: #fff; /* Icons also plain white until hover */
+  color: #fff;
   transition: 0.3s;
 }
 
-/* Icon changes color when the parent li is hovered */
+/* Icon inherits the rainbow color when the row is hovered */
 .about-me .content ul li:hover i {
-  color: inherit; 
+  color: inherit;
+}
+
+/* 4. Remove the previous general green hover for paragraphs 
+   or change it to something subtle like white brilliance */
+.about-me .content p:hover {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 /*--------------------------------------------------------------
 # Counts
