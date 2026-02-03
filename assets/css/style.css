@@ -18,23 +18,22 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
+  inset: 0;
 
-  /* Background image with dark overlay */
   background:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-    url("assets/img/bg.jpeg") center center no-repeat;
+    url("../img/bg.jpeg") center center no-repeat;
 
   background-size: cover;
-
-  /* Optional cinematic touch */
-  filter: brightness(0.85) contrast(1.1);
-
   z-index: -1;
 }
+
+@media (min-width: 1024px) {
+  body::before {
+    background-attachment: fixed;
+  }
+}
+
 
 
 @media (min-width: 1024px) {
