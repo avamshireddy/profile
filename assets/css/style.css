@@ -1096,3 +1096,37 @@ section .container {
     transform: translateX(-50%);
   }
 }
+/*--------------------------------------------------------------
+# Skills Text - VIBGYOR with Neon Glow Hover
+--------------------------------------------------------------*/
+.skills-text span {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skills-text span:hover {
+  transform: translateX(6px);
+}
+
+/* VIBGYOR Colors */
+.violet { color: #8a2be2; }
+.indigo { color: #4b0082; }
+.blue   { color: #1e90ff; }
+.green  { color: #2ecc71; }
+.yellow { color: #f1c40f; }
+.orange { color: #e67e22; }
+.red    { color: #e74c3c; }
+
+/* Neon glow effect on hover */
+.violet:hover { text-shadow: 0 0 8px #8a2be2, 0 0 16px #8a2be2; }
+.indigo:hover { text-shadow: 0 0 8px #4b0082, 0 0 16px #4b0082; }
+.blue:hover   { text-shadow: 0 0 8px #1e90ff, 0 0 16px #1e90ff; }
+.green:hover  { text-shadow: 0 0 8px #2ecc71, 0 0 16px #2ecc71; }
+.yellow:hover { text-shadow: 0 0 8px #f1c40f, 0 0 16px #f1c40f; }
+.orange:hover { text-shadow: 0 0 8px #e67e22, 0 0 16px #e67e22; }
+.red:hover    { text-shadow: 0 0 8px #e74c3c, 0 0 16px #e74c3c; }
+
