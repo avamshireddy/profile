@@ -10,46 +10,23 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #ffffff;
-  margin: 0;
+  color: #fff;
   position: relative;
-  z-index: 1;
-  overflow-x: hidden;
+  background: transparent; /* IMPORTANT */
 }
 
-/* GIF background */
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #ffffff;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-  overflow-x: hidden;
-}
-
-/* GIF background */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
 
-  background: url("your-gif.gif") no-repeat center center;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("../img/bg.jpg") center center no-repeat;
+
   background-size: cover;
-
-  z-index: -2;
-}
-
-/* Optional dark overlay (recommended for readability) */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.35);
-
   z-index: -1;
 }
-
 
 @media (min-width: 1024px) {
   body::before {
