@@ -18,6 +18,16 @@ body {
 }
 
 /* GIF background */
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+/* GIF background */
 body::before {
   content: "";
   position: fixed;
@@ -26,22 +36,20 @@ body::before {
   background: url("your-gif.gif") no-repeat center center;
   background-size: cover;
 
-  filter: blur(8px);
-  transform: scale(1.1); /* prevents edge blur gaps */
-
   z-index: -2;
 }
 
-/* Dark overlay for readability */
+/* Optional dark overlay (recommended for readability) */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.35);
 
   z-index: -1;
 }
+
 
 @media (min-width: 1024px) {
   body::before {
