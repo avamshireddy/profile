@@ -384,28 +384,44 @@ section .container {
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #1c7d32;
+  color: #fff; /* Changed from green to plain white */
 }
 
-.about-me .content ul {
-  list-style: none;
-  padding: 0;
+/* Default state for list items and paragraphs */
+.about-me .content ul li, 
+.about-me .content p {
+  color: #dee2e6; /* Plain light grey */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: default;
 }
 
-.about-me .content ul li {
-  padding-bottom: 10px;
+/* VIBGYOR Hover Effects */
+/* We use n-th child to assign different colors to different lines automatically */
+
+.about-me .content ul li:nth-child(7n+1):hover { color: #8a2be2; text-shadow: 0 0 5px #8a2be2; } /* Violet */
+.about-me .content ul li:nth-child(7n+2):hover { color: #4b0082; text-shadow: 0 0 5px #4b0082; } /* Indigo */
+.about-me .content ul li:nth-child(7n+3):hover { color: #1e90ff; text-shadow: 0 0 5px #1e90ff; } /* Blue */
+.about-me .content ul li:nth-child(7n+4):hover { color: #2ecc71; text-shadow: 0 0 5px #2ecc71; } /* Green */
+.about-me .content ul li:nth-child(7n+5):hover { color: #f1c40f; text-shadow: 0 0 5px #f1c40f; } /* Yellow */
+.about-me .content ul li:nth-child(7n+6):hover { color: #e67e22; text-shadow: 0 0 5px #e67e22; } /* Orange */
+.about-me .content ul li:nth-child(7n+7):hover { color: #e74c3c; text-shadow: 0 0 5px #e74c3c; } /* Red */
+
+/* Also apply a specific color to paragraphs on hover */
+.about-me .content p:hover {
+  color: #12d640; /* Vibrant green on hover for general text */
 }
 
 .about-me .content ul i {
   font-size: 20px;
   padding-right: 2px;
-  color: #1c7d32;
+  color: #fff; /* Icons also plain white until hover */
+  transition: 0.3s;
 }
 
-.about-me .content p:last-child {
-  margin-bottom: 0;
+/* Icon changes color when the parent li is hovered */
+.about-me .content ul li:hover i {
+  color: inherit; 
 }
-
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
@@ -1074,60 +1090,3 @@ section .container {
     transform: rotate(360deg);
   }
 }
-
-/*--------------------------------------------------------------
-# Credits
---------------------------------------------------------------*/
-.credits {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  font-size: 13px;
-  color: #fff;
-  z-index: 1;
-}
-
-.credits a {
-  color: #1c7d32;
-  transition: 0.3s;
-}
-
-.credits a:hover {
-  color: #fff;
-}
-
-@media (max-width: 992px) {
-  .credits {
-    left: 50%;
-    right: 0;
-    transform: translateX(-50%);
-  }
-}
-
-/* VIBGYOR Skills Neon Effect */
-.skills-text span {
-  display: inline-block;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-/* VIBGYOR Colors */
-.violet { color: #8a2be2; }
-.indigo { color: #4b0082; }
-.blue   { color: #1e90ff; }
-.green  { color: #2ecc71; }
-.yellow { color: #f1c40f; }
-.orange { color: #e67e22; }
-.red    { color: #e74c3c; }
-
-/* Neon Glow on Hover */
-.violet:hover { text-shadow: 0 0 8px #8a2be2, 0 0 16px #8a2be2; }
-.indigo:hover { text-shadow: 0 0 8px #4b0082, 0 0 16px #4b0082; }
-.blue:hover   { text-shadow: 0 0 8px #1e90ff, 0 0 16px #1e90ff; }
-.green:hover  { text-shadow: 0 0 8px #2ecc71, 0 0 16px #2ecc71; }
-.yellow:hover { text-shadow: 0 0 8px #f1c40f, 0 0 16px #f1c40f; }
-.orange:hover { text-shadow: 0 0 8px #e67e22, 0 0 16px #e67e22; }
-.red:hover    { text-shadow: 0 0 8px #e74c3c, 0 0 16px #e74c3c; }
