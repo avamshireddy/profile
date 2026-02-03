@@ -1068,36 +1068,7 @@ section .container {
   }
 }
 
-/*--------------------------------------------------------------
-# Credits
---------------------------------------------------------------*/
-.credits {
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  font-size: 13px;
-  color: #fff;
-  z-index: 1;
-}
-
-.credits a {
-  color: #1c7d32;
-  transition: 0.3s;
-}
-
-.credits a:hover {
-  color: #fff;
-}
-
-@media (max-width: 992px) {
-  .credits {
-    left: 50%;
-    right: 0;
-    transform: translateX(-50%);
-  }
-}
-
-/* VIBGYOR Skills Neon Effect */
+//* Skills text default color */
 .skills-text span {
   display: inline-block;
   margin-bottom: 10px;
@@ -1105,22 +1076,15 @@ section .container {
   font-family: 'Open Sans', sans-serif;
   transition: all 0.3s ease;
   cursor: pointer;
+  color: #fff; /* default text color */
+  text-shadow: none; /* remove glow by default */
 }
 
-/* VIBGYOR Colors */
-.violet { color: #8a2be2; }
-.indigo { color: #4b0082; }
-.blue   { color: #1e90ff; }
-.green  { color: #2ecc71; }
-.yellow { color: #f1c40f; }
-.orange { color: #e67e22; }
-.red    { color: #e74c3c; }
-
-/* Neon Glow on Hover */
-.violet:hover { text-shadow: 0 0 8px #8a2be2, 0 0 16px #8a2be2; }
-.indigo:hover { text-shadow: 0 0 8px #4b0082, 0 0 16px #4b0082; }
-.blue:hover   { text-shadow: 0 0 8px #1e90ff, 0 0 16px #1e90ff; }
-.green:hover  { text-shadow: 0 0 8px #2ecc71, 0 0 16px #2ecc71; }
-.yellow:hover { text-shadow: 0 0 8px #f1c40f, 0 0 16px #f1c40f; }
-.orange:hover { text-shadow: 0 0 8px #e67e22, 0 0 16px #e67e22; }
-.red:hover    { text-shadow: 0 0 8px #e74c3c, 0 0 16px #e74c3c; }
+/* VIBGYOR colors on hover */
+.skills-text span.violet:hover   { color: #8a2be2; text-shadow: 0 0 8px #8a2be2, 0 0 16px #8a2be2; }
+.skills-text span.indigo:hover   { color: #4b0082; text-shadow: 0 0 8px #4b0082, 0 0 16px #4b0082; }
+.skills-text span.blue:hover     { color: #1e90ff; text-shadow: 0 0 8px #1e90ff, 0 0 16px #1e90ff; }
+.skills-text span.green:hover    { color: #2ecc71; text-shadow: 0 0 8px #2ecc71, 0 0 16px #2ecc71; }
+.skills-text span.yellow:hover   { color: #f1c40f; text-shadow: 0 0 8px #f1c40f, 0 0 16px #f1c40f; }
+.skills-text span.orange:hover   { color: #e67e22; text-shadow: 0 0 8px #e67e22, 0 0 16px #e67e22; }
+.skills-text span.red:hover      { color: #e74c3c; text-shadow: 0 0 8px #e74c3c, 0 0 16px #e74c3c; }
