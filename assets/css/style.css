@@ -379,48 +379,40 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# About
+# About Section - VIBGYOR Hover Fix
 --------------------------------------------------------------*/
-.about-me .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #fff;
+/* Make the headings plain white */
+#about .content h3, 
+#about .content strong {
+  color: #ffffff !important;
 }
 
-/* 1. Default state: Plain light grey for all text */
-.about-me .content ul li, 
-.about-me .content p {
-  color: #dee2e6; 
-  transition: all 0.3s ease;
-  cursor: default;
+/* Default state: All text is plain white/grey */
+#about .content p,
+#about .content ul li {
+  color: #dee2e6 !important; 
+  transition: all 0.3s ease !important;
+  text-shadow: none !important;
 }
 
-/* 2. Specific VIBGYOR Hover Effects for List Items */
-/* We add .about-me to increase specificity so green doesn't take over */
-.about-me .content ul li:nth-child(7n+1):hover { color: #8a2be2 !important; text-shadow: 0 0 8px #8a2be2; } /* Violet */
-.about-me .content ul li:nth-child(7n+2):hover { color: #4b0082 !important; text-shadow: 0 0 8px #4b0082; } /* Indigo */
-.about-me .content ul li:nth-child(7n+3):hover { color: #1e90ff !important; text-shadow: 0 0 8px #1e90ff; } /* Blue */
-.about-me .content ul li:nth-child(7n+4):hover { color: #2ecc71 !important; text-shadow: 0 0 8px #2ecc71; } /* Green */
-.about-me .content ul li:nth-child(7n+5):hover { color: #f1c40f !important; text-shadow: 0 0 8px #f1c40f; } /* Yellow */
-.about-me .content ul li:nth-child(7n+6):hover { color: #e67e22 !important; text-shadow: 0 0 8px #e67e22; } /* Orange */
-.about-me .content ul li:nth-child(7n+7):hover { color: #e74c3c !important; text-shadow: 0 0 8px #e74c3c; } /* Red */
+/* VIBGYOR Effect on Hover - Using !important to force the color */
+#about .content ul li:nth-of-type(7n+1):hover { color: #8a2be2 !important; text-shadow: 0 0 10px #8a2be2 !important; } /* Violet */
+#about .content ul li:nth-of-type(7n+2):hover { color: #4b0082 !important; text-shadow: 0 0 10px #4b0082 !important; } /* Indigo */
+#about .content ul li:nth-of-type(7n+3):hover { color: #1e90ff !important; text-shadow: 0 0 10px #1e90ff !important; } /* Blue */
+#about .content ul li:nth-of-type(7n+4):hover { color: #2ecc71 !important; text-shadow: 0 0 10px #2ecc71 !important; } /* Green */
+#about .content ul li:nth-of-type(7n+5):hover { color: #f1c40f !important; text-shadow: 0 0 10px #f1c40f !important; } /* Yellow */
+#about .content ul li:nth-of-type(7n+6):hover { color: #e67e22 !important; text-shadow: 0 0 10px #e67e22 !important; } /* Orange */
+#about .content ul li:nth-of-type(7n+7):hover { color: #e74c3c !important; text-shadow: 0 0 10px #e74c3c !important; } /* Red */
 
-/* 3. Handle the Icons (i tags) inside the list */
-.about-me .content ul i {
-  color: #fff;
-  transition: 0.3s;
+/* Ensure icons inside the list items also change color */
+#about .content ul li:hover i {
+  color: inherit !important;
 }
 
-/* Icon inherits the rainbow color when the row is hovered */
-.about-me .content ul li:hover i {
-  color: inherit;
-}
-
-/* 4. Remove the previous general green hover for paragraphs 
-   or change it to something subtle like white brilliance */
-.about-me .content p:hover {
-  color: #fff;
-  text-shadow: 0 0 5px rgba(255,255,255,0.5);
+/* Paragraph hover effect - glowing white */
+#about .content p:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6) !important;
 }
 /*--------------------------------------------------------------
 # Counts
